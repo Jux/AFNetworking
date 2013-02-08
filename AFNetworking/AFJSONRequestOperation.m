@@ -66,6 +66,11 @@ static dispatch_queue_t json_request_operation_processing_queue() {
 }
 
 - (id)responseJSON {
+    
+    //NSString*newStr  = [[NSString alloc] initWithData:self.responseData encoding:NSUTF8StringEncoding];
+    
+    //DLog(@"Response data: %@", newStr);
+    
     if (!_responseJSON && [self.responseData length] > 0 && [self isFinished] && !self.JSONError) {
         NSError *error = nil;
 
